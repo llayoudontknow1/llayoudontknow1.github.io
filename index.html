@@ -194,9 +194,11 @@
 				switch (document.getElementById("badum").muted) {
 					case true:
 						document.getElementById("badum").muted = false;
+						muteButton.textContent = "Mute";
 						return
 					case false:
 						document.getElementById("badum").muted = true;
+						muteButton.textContent = "Unmute";
 						return
 					default:
 						console.log("Mute status unavailable.");
