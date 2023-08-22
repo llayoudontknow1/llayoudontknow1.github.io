@@ -186,7 +186,7 @@
 					buttonText,
 					jokeButtonSpan.textContent
 				);
-				setTimeout(playSound(), 5000);
+				setTimeout(playSound, 3000);
 			
 			}
 			
@@ -208,7 +208,7 @@
 			function playSound() {
 				audio.volume = 0.2;
 				audio.currentTime = 0;
-				setTimeout(audio.play(), 5000);
+				audio.play();
 			};
 			
 			function stopSound() {
