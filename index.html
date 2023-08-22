@@ -154,7 +154,9 @@ h6 {
 	let show = () =>{let element = document.getElementById("refresh");
 	element.removeAttribute("hidden");}
 	</script>
-  <script>const jokeButton = document.querySelector('.getJoke');
+  <script>
+	  const muteButton = document.getElementById("mute");
+	  const jokeButton = document.querySelector('.getJoke');
 const jokeButtonSpan = jokeButton.querySelector('.jokeText');
 const jokeHolder = document.querySelector('.joke p');
 const loader = document.querySelector('.loader');
@@ -201,12 +203,9 @@ async function handleClick() {
   setTimeout(playSound(),5000);
   
 }
-	  function muteMe(elem){
-		elem.muted = !elem.muted;
-		  elem.currentTime=0;
-	  }
-	  function mutePage(){
-		  document.querySelectorAll("video, audio").forEach((elem) => muteMe(elem));
+	  function mutePagee(){
+		muteButton.mute = true ? muteButton.mute = false : muteButton.mute = true;
+		  muteButton.currentTime = 0;
 	  }
 function playSound(){
 const audio = document.querySelector('audio[id="badum"]');
