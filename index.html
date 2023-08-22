@@ -149,7 +149,7 @@ h6 {
 		  <span>Mute</span>
 	  </button>
   </div>
-  <audio src="https://bigsoundbank.com/UPLOAD/mp3/0433.mp3" id="badum"></audio>
+  <audio src="https://bigsoundbank.com/UPLOAD/mp3/0433.mp3" id="badum" controls hidden></audio>
 	<script>
 	let show = () =>{let element = document.getElementById("refresh");
 	element.removeAttribute("hidden");}
@@ -204,7 +204,7 @@ async function handleClick() {
   
 }
 	  function mutePage(){
-		muteButton.mute = true ? muteButton.mute = false : muteButton.mute = true;
+		muteButton.muted ? muteButton.removeAttribute("muted") : muteButton.addAttribute("muted");
 		  muteButton.currentTime = 0;
 	  }
 function playSound(){
