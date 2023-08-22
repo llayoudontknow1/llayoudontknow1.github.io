@@ -155,6 +155,10 @@ h6 {
 	element.removeAttribute("hidden");}
 	</script>
   <script>
+	  const audio = document.querySelector('audio[id="badum"]');
+if (!audio) return;
+audio.currentTime = 0;
+audio.volume = 0.2;
 	  const muteButton = document.getElementById("mute");
 	  const jokeButton = document.querySelector('.getJoke');
 const jokeButtonSpan = jokeButton.querySelector('.jokeText');
@@ -208,10 +212,7 @@ async function handleClick() {
 		  muteButton.currentTime = 0;
 	  }
 function playSound(){
-const audio = document.querySelector('audio[id="badum"]');
-if (!audio) return;
-audio.currentTime = 0;
-audio.volume = 0.5;
+	audio.currentTime = 0;
 audio.play();
 }
 jokeButton.addEventListener('click', handleClick);</script>
