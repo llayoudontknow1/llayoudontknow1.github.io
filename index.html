@@ -204,7 +204,7 @@ async function handleClick() {
   
 }
 	  function mutePage(){
-		muteButton.muted ? muteButton.removeAttribute("muted") : muteButton.addAttribute("muted");
+		muteButton.muted ? muteButton.removeAttribute("muted") : muteButton.setAttribute("muted");
 		  muteButton.currentTime = 0;
 	  }
 function playSound(){
