@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dad Jokes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dad Jokes</title>
 
 <style>
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -14,94 +14,94 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
 
 /* Variables */
 html {
-  --grey: #e7e7e7;
-  --gray: var(--grey);
-  --blue: #0072B9;
-  --pink: #D60087;
-  --yellow: #ffc600;
-  --black: #2e2e2e;
-  --red: #c73737;
-  --green: #61e846;
-  --text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
-  --box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
-  font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  box-sizing: border-box;
+--grey: #e7e7e7;
+--gray: var(--grey);
+--blue: #0072B9;
+--pink: #D60087;
+--yellow: #ffc600;
+--black: #2e2e2e;
+--red: #c73737;
+--green: #61e846;
+--text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+--box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+font-size: 62.5%;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+box-sizing: inherit;
 }
 
 body {
-  font-size: 2rem;
-  line-height: 1.5;
-  background-color: var(--blue);
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 21.184c.13.357.264.72.402 1.088l.661 1.768C4.653 33.64 6 39.647 6 50c0 10.271-1.222 15.362-4.928 24.629-.383.955-.74 1.869-1.072 2.75v6.225c.73-2.51 1.691-5.139 2.928-8.233C6.722 65.888 8 60.562 8 50c0-10.626-1.397-16.855-5.063-26.66l-.662-1.767C1.352 19.098.601 16.913 0 14.85v6.335zm20 0C17.108 13.258 16 8.077 16 0h2c0 5.744.574 9.951 2 14.85v6.334zm0 56.195c-2.966 7.86-4 13.123-4 22.621h2c0-6.842.542-11.386 2-16.396v-6.225zM6 0c0 8.44 1.21 13.718 4.402 22.272l.661 1.768C14.653 33.64 16 39.647 16 50c0 10.271-1.222 15.362-4.928 24.629C7.278 84.112 6 89.438 6 100h2c0-10.271 1.222-15.362 4.928-24.629C16.722 65.888 18 60.562 18 50c0-10.626-1.397-16.855-5.063-26.66l-.662-1.767C9.16 13.223 8 8.163 8 0H6z' fill='%23fff' fill-rule='nonzero' fill-opacity='.1' opacity='.349'/%3E%3C/svg%3E%0A");
-  background-size: 15px;
+font-size: 2rem;
+line-height: 1.5;
+background-color: var(--blue);
+background-image: url("data:image/svg+xml,%3Csvg width='20' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 21.184c.13.357.264.72.402 1.088l.661 1.768C4.653 33.64 6 39.647 6 50c0 10.271-1.222 15.362-4.928 24.629-.383.955-.74 1.869-1.072 2.75v6.225c.73-2.51 1.691-5.139 2.928-8.233C6.722 65.888 8 60.562 8 50c0-10.626-1.397-16.855-5.063-26.66l-.662-1.767C1.352 19.098.601 16.913 0 14.85v6.335zm20 0C17.108 13.258 16 8.077 16 0h2c0 5.744.574 9.951 2 14.85v6.334zm0 56.195c-2.966 7.86-4 13.123-4 22.621h2c0-6.842.542-11.386 2-16.396v-6.225zM6 0c0 8.44 1.21 13.718 4.402 22.272l.661 1.768C14.653 33.64 16 39.647 16 50c0 10.271-1.222 15.362-4.928 24.629C7.278 84.112 6 89.438 6 100h2c0-10.271 1.222-15.362 4.928-24.629C16.722 65.888 18 60.562 18 50c0-10.626-1.397-16.855-5.063-26.66l-.662-1.767C9.16 13.223 8 8.163 8 0H6z' fill='%23fff' fill-rule='nonzero' fill-opacity='.1' opacity='.349'/%3E%3C/svg%3E%0A");
+background-size: 15px;
 }
 
 
 /* Table Styles */
 
 table {
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  border-collapse: collapse;
+border-radius: 5px;
+overflow: hidden;
+margin-bottom: 2rem;
+border-collapse: collapse;
 }
 
 td, th {
-  border: 1px solid var(--grey);
-  padding: 0.5rem;
+border: 1px solid var(--grey);
+padding: 0.5rem;
 }
 
 
 /* Helper Divs */
 
 .wrapper {
-  max-width: 1000px;
-  margin: 4rem auto;
-  padding: 2rem;
-  background: white;
+max-width: 1000px;
+margin: 4rem auto;
+padding: 2rem;
+background: white;
 }
 
 .box, .wrapper {
-  box-shadow: 0 0 3px 5px rgba(0,0,0,0.08653);
+box-shadow: 0 0 3px 5px rgba(0,0,0,0.08653);
 }
 a {
-  color: var(--blue);
-  text-decoration-color: var(--yellow);
+color: var(--blue);
+text-decoration-color: var(--yellow);
 }
 
 
 a.button, button, input[type="button"] {
-  color: white;
-  background: var(--pink);
-  padding: 1rem;
-  border: 0;
-  border: 2px solid transparent;
-  text-decoration: none;
-  font-weight: 600;
-  font-size:2rem;
+color: white;
+background: var(--pink);
+padding: 1rem;
+border: 0;
+border: 2px solid transparent;
+text-decoration: none;
+font-weight: 600;
+font-size:2rem;
 }
 
 :focus {
-  outline-color: var(--pink);
+outline-color: var(--pink);
 }
 
 fieldset {
-  border: 1px solid black;
+border: 1px solid black;
 }
 
 input:not([type="checkbox"]):not([type="radio"]), textarea, select {
-  display: block;
-  padding: 1rem;
-  border: 1px solid var(--grey);
+display: block;
+padding: 1rem;
+border: 1px solid var(--grey);
 }
 
 .success {
-  border: 1px solid red;
+border: 1px solid red;
 }
 
 h1,
@@ -110,10 +110,10 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
-  margin-top: 0;
-  line-height: 1;
-  text-shadow: var(--text-shadow);
+color: white;
+margin-top: 0;
+line-height: 1;
+text-shadow: var(--text-shadow);
 }
 .wrapper h1,
 .wrapper h2,
@@ -121,100 +121,101 @@ h6 {
 .wrapper h4,
 .wrapper h5,
 .wrapper h6 {
-  color: var(--black);
-  text-shadow: none;
+color: var(--black);
+text-shadow: none;
 }
 </style>
 </head>
 
 <body>
 
-  <div class="wrapper">
-		<p><center><font size="15">Dad Jokes:</font></center></p>
-	    <div class="joke">
-      <p></p>
-    </div>
-    <button class="getJoke" onClick="show();">
-      <span class="jokeText">Get A Joke</span>
-      <div class="lds-ripple loader hidden">
-        <div></div>
-        <div></div>
-      </div>
-    </button>
-	
-	<button id ="refresh" hidden class="getJoke" onClick="window.location.reload();">
-		<span>Refresh</span>
-		</button>
-	  <button id="mute" class="getJoke" onClick="mutePage();">
-		  <span>Mute</span>
-	  </button>
-  </div>
-  <audio src="https://bigsoundbank.com/UPLOAD/mp3/0433.mp3" id="badum" controls hidden></audio>
-	<script>
-	let show = () =>{let element = document.getElementById("refresh");
-	element.removeAttribute("hidden");}
-	</script>
-  <script>
-	  const audio = document.querySelector('audio[id="badum"]');
-if (!audio) return;
-audio.currentTime = 0;
-audio.volume = 0.2;
-	  const muteButton = document.getElementById("mute");
-	  const jokeButton = document.querySelector('.getJoke');
+<div class="wrapper">
+<p><center><font size="15">Dad Jokes:</font></center></p>
+<div class="joke">
+<p></p>
+</div>
+<button class="getJoke" onClick="show();">
+<span class="jokeText">Get A Joke</span>
+<div class="lds-ripple loader hidden">
+<div></div>
+<div></div>
+</div>
+</button>
+
+<button id ="refresh" hidden class="getJoke" onClick="window.location.reload();">
+<span>Refresh</span>
+</button>
+<button id="mute" class="getJoke" onClick="mutePage();">
+<span>Mute</span>
+</button>
+</div>
+<audio src="https://bigsoundbank.com/UPLOAD/mp3/0433.mp3" id="badum" controls hidden volume="0.5"></audio>
+<script>
+let show = () =>{let element = document.getElementById("refresh");
+element.removeAttribute("hidden");}
+</script>
+<script>
+const audio = document.querySelector('audio[id="badum"]');
+const muteButton = document.getElementById("mute");
+const jokeButton = document.querySelector('.getJoke');
 const jokeButtonSpan = jokeButton.querySelector('.jokeText');
 const jokeHolder = document.querySelector('.joke p');
 const loader = document.querySelector('.loader');
 const refreshButton = document.getElementById("refresh");
 
 const buttonText = [
-  'Ugh.',
-  'OMG Dad.',
-  'You are the worst',
-  'Seriously..',
-  'Stop it.',
-  'Please stop',
-  'That was the worst one',
+'Ugh.',
+'OMG Dad.',
+'You are the worst',
+'Seriously..',
+'Stop it.',
+'Please stop',
+'That was the worst one',
 ];
 async function fetchJoke() {
-  // turn loader on
-  loader.classList.remove('hidden');
-  const response = await fetch('https://icanhazdadjoke.com', {
-    headers: {
-      Accept: 'application/json',
-    },
-  });
-  const data = await response.json();
-  // turn the loader off
-  loader.classList.add('hidden');
-  return data;
+// turn loader on
+loader.classList.remove('hidden');
+const response = await fetch('https://icanhazdadjoke.com', {
+headers: {
+Accept: 'application/json',
+},
+});
+const data = await response.json();
+// turn the loader off
+loader.classList.add('hidden');
+return data;
 }
 function randomItemFromArray(arr, not) {
-  const item = arr[Math.floor(Math.random() * arr.length)];
-  if (item === not) {
-    console.log('Ahh we used that one last time, look again');
-    return randomItemFromArray(arr, not);
-  }
-  return item;
+const item = arr[Math.floor(Math.random() * arr.length)];
+if (item === not) {
+console.log('Ahh we used that one last time, look again');
+return randomItemFromArray(arr, not);
+}
+return item;
 }
 async function handleClick() {
-  refreshButton.removeAttribute("hidden");
-  const { joke } = await fetchJoke();
-  jokeHolder.textContent = joke;
-  jokeButtonSpan.textContent = randomItemFromArray(
-    buttonText,
-    jokeButtonSpan.textContent
-  );
-  setTimeout(playSound(),5000);
-  
+refreshButton.removeAttribute("hidden");
+const { joke } = await fetchJoke();
+jokeHolder.textContent = joke;
+jokeButtonSpan.textContent = randomItemFromArray(
+buttonText,
+jokeButtonSpan.textContent
+);
+setTimeout(playSound(),5000);
+
 }
-	  function mutePage(){
-		muteButton.muted = true ? muteButton.muted = false : muteButton.muted = true;
-		  muteButton.currentTime = 0;
-	  }
+function mutePage(){
+	if(muteButton.muted = true){
+		muteButton.muted = false;
+	} else {
+		muteButton.muted = true;
+	}
+	muteButton.currentTime = 0;
+}
 function playSound(){
 	audio.currentTime = 0;
-audio.play();
-}
+	audio.play();
+	}
 jokeButton.addEventListener('click', handleClick);</script>
 </body>
 
