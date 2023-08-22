@@ -149,7 +149,7 @@ text-shadow: none;
 <span>Mute</span>
 </button>
 </div>
-<audio id="badum" controls hidden volume="0.5">
+<audio id="badum" controls>
 	<source src="https://bigsoundbank.com/UPLOAD/mp3/0433.mp3">
 </audio>
 <script>
@@ -158,7 +158,6 @@ element.removeAttribute("hidden");}
 </script>
 <script>
 const audio = document.getElementById("badum"');
-	audio.volume=0.5;
 const muteButton = document.getElementById("mute");
 const jokeButton = document.querySelector('.getJoke');
 const jokeButtonSpan = jokeButton.querySelector('.jokeText');
@@ -216,6 +215,7 @@ function mutePage(){
 	audio.currentTime = 0;
 }
 function playSound(){
+	audio.volume = 0.5;
 	audio.currentTime = 0;
 	audio.play();
 	}
