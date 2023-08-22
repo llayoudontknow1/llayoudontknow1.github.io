@@ -203,6 +203,7 @@ async function handleClick() {
 }
 	  function muteMe(elem){
 		elem.muted = !elem.muted;
+		  elem.currentTime=0;
 	  }
 	  function mutePage(){
 		  document.querySelectorAll("video, audio").forEach((elem) => muteMe(elem));
