@@ -202,6 +202,7 @@ function playSound(){
 const audio = document.querySelector('audio[id="badum"]');
 if (!audio) return;
 audio.currentTime = 0;
+audio.volume = 0.5;
 audio.play();
 }
 jokeButton.addEventListener('click', handleClick);</script>
