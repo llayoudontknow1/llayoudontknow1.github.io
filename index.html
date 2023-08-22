@@ -149,7 +149,9 @@ text-shadow: none;
 <span>Mute</span>
 </button>
 </div>
-<audio src="https://bigsoundbank.com/UPLOAD/mp3/0433.mp3" id="badum" controls hidden volume="0.5"></audio>
+<audio id="badum" controls hidden volume="0.5">
+	<source src="https://bigsoundbank.com/UPLOAD/mp3/0433.mp3">
+</audio>
 <script>
 let show = () =>{let element = document.getElementById("refresh");
 element.removeAttribute("hidden");}
