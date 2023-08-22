@@ -208,7 +208,7 @@
 			function playSound() {
 				audio.volume = 0.2;
 				audio.currentTime = 0;
-				audio.play();
+				setTimeout(audio.play(), 5000);
 			};
 			
 			function stopSound() {
