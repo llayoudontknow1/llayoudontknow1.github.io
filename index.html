@@ -174,7 +174,7 @@
 				return item;
 			}
 			async function handleClick() {
-				refreshButton.removeAttribute("hidden");
+				refreshButton.hidden = false;
 				const {
 					joke
 				} = await fetchJoke();
@@ -218,8 +218,7 @@
 			function clearPage() {
 				jokeHolder.textContent = "";
 				jokeButtonSpan.textContent = "Get a Joke";
-				let refreshButton = document.getElementById("refresh");
-				refreshButton.setAttribute("hidden");
+				refreshButton.hidden = true;
 			}
 			
 			jokeButton.addEventListener('click', handleClick);
