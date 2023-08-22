@@ -207,12 +207,15 @@ setTimeout(playSound(),5000);
 
 }
 function mutePage(){
-	if(audio.muted = true){
-		audio.muted = false;
+
+	if(document.getElementById("badum").muted = true){
+		document.getElementById("badum").muted = false;
+		console.log("Audio should now be unmuted.")
 	} else {
-		audio.muted = true;
+		document.getElementById("badum").muted = true;
+		console.log("Audio should now be muted.")
 	}
-	audio.currentTime = 0;
+	document.getElementById("badum").currentTime = 0;
 }
 function playSound(){
 	audio.volume = 0.5;
