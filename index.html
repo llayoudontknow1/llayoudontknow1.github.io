@@ -119,7 +119,7 @@
 					<div></div>
 				</div>
 			</button>
-			<button id ="refresh" hidden class="getJoke" onClick="window.location.reload();">
+			<button id ="refresh" hidden class="getJoke" onClick="clearPage();">
 			<span>Refresh</span>
 			</button>
 			<button id="mute" class="getJoke" onClick="mutePage();">
@@ -197,6 +197,7 @@
 						return
 					default:
 						console.log("Mute status unavailable.");
+						return
 				}
 				console.log(document.getElementById("badum").muted);
 			}
@@ -207,15 +208,22 @@
 				audio.play();
 			};
 			
-			function stopSound(){
-			  if (audio.currentTime >= 1){
-			    audio.pause();
-			    audio.currentTime=0;
-			  }
+			function stopSound() {
+				if (audio.currentTime >= 1) {
+					audio.pause();
+					audio.currentTime = 0;
+				}
 			};
 			
+			function clearPage() {
+				jokeHolder.textContent = "";
+				jokeButtonSpan.textContent = "Get a Joke";
+				let refreshButton = document.getElementById("refresh");
+				refreshButton.setAttribute("hidden");
+			}
+			
 			jokeButton.addEventListener('click', handleClick);
-			audio.addEventListener('timeupdate',stopSound);
+			audio.addEventListener('timeupdate', stopSound);
 		</script>
 	</body>
 </html>
