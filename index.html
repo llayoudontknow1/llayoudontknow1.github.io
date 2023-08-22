@@ -224,7 +224,12 @@ function playSound(){
 	audio.currentTime = 0;
 	audio.play();
 	}
-jokeButton.addEventListener('click', handleClick);</script>
+	jokeButton.addEventListener('click', handleClick);</script>
+	audio.addEventListener('timeupdate', function() {
+	if(audio.currentTime >= 2){
+	audio.pause();
+	audio.currentTime =0;
+	});
 </body>
 
 </html>
