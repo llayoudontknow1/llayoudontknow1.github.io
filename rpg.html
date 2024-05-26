@@ -193,18 +193,22 @@ border: 3px solid #feac32;
 	}
 
 	function goTown() {
+	button4.style.display="block";
 	update(locations[0]);
 	}
 
 	function goStore() {
+		button4.style.display="block";
 	update(locations[1]);
 	}
 
 	function goCave() {
+		button4.style.display="block";
 	update(locations[2]);
 	}
 	
 	function checkWeapon(){
+		button4.style.display="none";
 		update(locations[8])
 	}
 
@@ -267,6 +271,7 @@ border: 3px solid #feac32;
 	}
 
 	function goFight() {
+	button4.style.display = "none";
 	update(locations[3]);
 	monsterHealth = monsters[fighting].health;
 	monsterStats.style.display = "block";
@@ -327,14 +332,17 @@ border: 3px solid #feac32;
 	xp += monsters[fighting].level;
 	goldText.innerText = gold;
 	xpText.innerText = xp;
+		button4.style.display="none";
 	update(locations[4]);
 	}
 
 	function lose() {
+		button4.style.display="none";
 	update(locations[5]);
 	}
 
 	function winGame() {
+		button4.style.display="none";
 	update(locations[6]);
 	}
 
@@ -347,10 +355,12 @@ border: 3px solid #feac32;
 	goldText.innerText = gold;
 	healthText.innerText = health;
 	xpText.innerText = xp;
+		button4.style.display="display";
 	goTown();
 	}
 
 	function easterEgg() {
+		button4.style.display="none";
 	update(locations[7]);
 	}
 
