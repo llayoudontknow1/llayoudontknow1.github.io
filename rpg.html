@@ -62,7 +62,7 @@ border: 3px solid #feac32;
       <button id="button1">Go to store</button>
       <button id="button2">Go to cave</button>
       <button id="button3">Fight dragon</button>
-	  <button id="button4">Check Weapon</button>
+	<button id="button4">Check Weapon</button>
     </div>
     <div id="monsterStats">
       <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
@@ -84,6 +84,7 @@ border: 3px solid #feac32;
 	const button1 = document.querySelector('#button1');
 	const button2 = document.querySelector("#button2");
 	const button3 = document.querySelector("#button3");
+	const button4 = document.querySelector("#button4");
 	const text = document.querySelector("#text");
 	const xpText = document.querySelector("#xpText");
 	const healthText = document.querySelector("#healthText");
@@ -117,57 +118,57 @@ border: 3px solid #feac32;
 	const locations = [
 	{
 	  name: "town square",
-	  "button text": ["Go to store", "Go to cave", "Fight dragon"],
+	  "button text": ["Go to store", "Go to cave", "Fight dragon", "Check Weapon"],
 	  "button functions": [goStore, goCave, fightDragon,checkWeapon],
 	  text: "You are in the town square. You see a sign that says \"Store\"."
 	},
 	{
 	  name: "store",
-	  "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+	  "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square", "Check Weapon"],
 	  "button functions": [buyHealth, buyWeapon, goTown,checkWeapon],
 	  text: "You enter the store."
 	},
 	{
 	  name: "cave",
-	  "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+	  "button text": ["Fight slime", "Fight fanged beast", "Go to town square", "Check Weapon"],
 	  "button functions": [fightSlime, fightBeast, goTown,checkWeapon],
 	  text: "You enter the cave. You see some monsters."
 	},
 	{
 	  name: "fight",
-	  "button text": ["Attack", "Dodge", "Run"],
+	  "button text": ["Attack", "Dodge", "Run", "Check Weapon"],
 	  "button functions": [attack, dodge, goTown,checkWeapon],
 	  text: "You are fighting a monster."
 	},
 	{
 	  name: "kill monster",
-	  "button text": ["Go to town square", "Go to town square", "Go to town square"],
+	  "button text": ["Go to town square", "Go to town square", "Go to town square", "Check Weapon"],
 	  "button functions": [goTown, goTown, easterEgg,checkWeapon],
 	  text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
 	},
 	{
 	  name: "lose",
-	  "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+	  "button text": ["REPLAY?", "REPLAY?", "REPLAY?", "Check Weapon"],
 	  "button functions": [restart, restart, restart,checkWeapon],
 	  text: "You die. &#x2620;"
 	},
 	{ 
 	  name: "win", 
-	  "button text": ["REPLAY?", "REPLAY?", "REPLAY?"], 
+	  "button text": ["REPLAY?", "REPLAY?", "REPLAY?", "Check Weapon"], 
 	  "button functions": [restart, restart, restart,checkWeapon], 
 	  text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;" 
 	},
 	{
 	  name: "easter egg",
-	  "button text": ["2", "8", "Go to town square?"],
+	  "button text": ["2", "8", "Go to town square?", "Check Weapon"],
 	  "button functions": [pickTwo, pickEight, goTown,checkWeapon],
 	  text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
 	},
 	{
 		name:"check weapon",
-		"button text": ["Go to store", "Go to cave", "Fight dragon"],
+		"button text": ["Go to store", "Go to cave", "Fight dragon", "Check Weapon"],
 		"button functions": [goStore, goCave, fightDragon,checkWeapon],
-		text:`You are currently weilding the ${weapons[currentWeapon]}.`
+		text:`You are currently weilding the ${weapons[currentWeapon].name}.`
 	}
 	];
 
@@ -203,7 +204,7 @@ border: 3px solid #feac32;
 	}
 	
 	function checkWeapon(){
-		update(locations[3])
+		update(locations[8])
 	}
 
 	function buyHealth() {
