@@ -168,7 +168,7 @@ border: 3px solid #feac32;
 		name:"check weapon",
 		"button text": ["Go to store", "Go to cave", "Fight dragon", "Check Weapon"],
 		"button functions": [goStore, goCave, fightDragon,checkWeapon],
-		text:`You are currently weilding the ${weapons[currentWeapon].name}.`
+		text:`You are currently weilding the `
 	}
 	];
 
@@ -188,7 +188,8 @@ border: 3px solid #feac32;
 	button2.onclick = location["button functions"][1];
 	button3.onclick = location["button functions"][2];
 	button4.onclick = location["button functions"][3];
-	text.innerHTML = location.text;
+	locations.indexOf(location) === 8 ? text.innerHTML = location.text + weapons[currentWeapon].name + "." : text.innerHTML = location.text;
+	//text.innerHTML = location.text;
 	}
 
 	function goTown() {
